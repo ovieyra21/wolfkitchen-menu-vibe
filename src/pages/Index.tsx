@@ -1,6 +1,7 @@
+
 import { Hero } from "@/components/Hero";
 import { MenuSection } from "@/components/MenuSection";
-
+import { MenuSlider } from "@/components/MenuSlider";
 const beverages = [
   {
     name: "Aguas del Día",
@@ -26,8 +27,9 @@ const beverages = [
     name: "Power Iron",
     price: "$25",
     description: "Café + Leche + Chocolate."
-  }
+  },
 ];
+
 
 const breakfast = [
   {
@@ -238,59 +240,25 @@ const tacos = [
   }
 ];
 
-const Index = () => {
+function IndexPage() {
   return (
     <div className="min-h-screen bg-wolf-dark">
       <Hero />
-      
+      <MenuSlider />
       <main className="py-16 px-4">
-        <MenuSection 
-          title="Bebidas"
-          items={beverages}
-        />
-        
-        <MenuSection 
-          title="Desayunos y Platos Ligeros"
-          items={breakfast}
-        />
-        
-        <MenuSection 
-          title="Baguettes"
-          items={baguettes}
-        />
-        
-        <MenuSection 
-          title="Sándwiches & Paninis"
-          items={sandwichesAndPaninis}
-        />
-        
-        <MenuSection 
-          title="Wraps"
-          items={wraps}
-        />
-        
-        <MenuSection 
-          title="Ensaladas"
-          items={salads}
-        />
-        
-        <MenuSection 
-          title="Dietas a Granel"
-          items={diets}
-        />
-        
-        <MenuSection 
-          title="Frutas"
-          items={fruits}
-        />
-        
-        <MenuSection 
-          title="Tacos"
-          items={tacos}
-        />
+        <MenuSection title="Bebidas" items={beverages} />
+        <MenuSection title="Desayunos y Platos Ligeros" items={breakfast} />
+        <MenuSection title="Baguettes" items={baguettes} />
+        <MenuSection title="Sándwiches & Paninis" items={sandwichesAndPaninis} />
+        <MenuSection title="Wraps" items={wraps} />
+        <MenuSection title="Ensaladas" items={salads} />
+        <MenuSection title="Dietas a Granel" items={diets} />
+        <MenuSection title="Frutas" items={fruits} />
+        <MenuSection title="Tacos" items={tacos} />
       </main>
     </div>
   );
-};
+}
 
-export default Index;
+
+export default IndexPage;
