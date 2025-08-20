@@ -2,7 +2,7 @@ import { Card } from "@/components/ui/card";
 
 interface MenuItem {
   name: string;
-  price: number;
+  price: string;
   description: string;
 }
 
@@ -31,8 +31,8 @@ export const MenuSection = ({ title, items }: MenuSectionProps) => {
                   </p>
                 </div>
                 <div className="text-right">
-                  <span className="text-2xl md:text-3xl font-bold text-wolf-text">
-                    ${item.price}
+                  <span className="text-xl md:text-2xl font-bold text-wolf-text">
+                    {item.price}
                   </span>
                 </div>
               </div>
